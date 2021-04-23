@@ -4,8 +4,6 @@ var md = new Remarkable('full', {
     typographer: true
   });
 
-md.use(remarkable_emoji);
-
 var fs = require('fs');
 
 var express= require('express'),
@@ -25,6 +23,6 @@ app.get("/blogs/:articlename", (req,res)=>{
     });
 })
 
-app.listen(8000,'localhost',function(){
+app.listen(process.env.PORT,process.env.IP,function(){
     console.log("app is running on: localhost:8000");
 })
