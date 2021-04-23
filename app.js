@@ -1,5 +1,4 @@
 const {Remarkable} = require('remarkable');
-var remarkable_emoji = require('remarkable-emoji');
 var md = new Remarkable('full', {
     html: true,
     typographer: true
